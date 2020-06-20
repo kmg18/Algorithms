@@ -38,4 +38,12 @@ if __name__ == '__main__':
     obj = Quicksort()
     input = [9,8,7,6,5,4,3,2,1]
     obj.quicksort(input)
-    print(input)
+    print(input) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    input = []
+    obj.quicksort(input)
+    print(input) #[]
+
+    input = [9, 8, -7, 6, -5, 4, 3, -2, 1]
+    obj.quicksort(input)
+    print(input) # [-7, -5, -2, 1, 3, 4, 6, 8, 9]

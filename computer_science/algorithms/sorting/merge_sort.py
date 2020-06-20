@@ -53,5 +53,5 @@ if __name__ == '__main__':
     input1 = [8, 9, 1, 5, 4 ,3, 2, 7, 6, 1,2, 3, 4, 5, 6, 7, 8, 9]
     input2 = [1,1,1,1,1,1,1,1,1,1]
     obj.mergesort(input1)
-    print(input1)
-    print(input2)
+    print(input1) # [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9]
+    print(input2) # [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]

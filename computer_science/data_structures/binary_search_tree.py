@@ -8,6 +8,11 @@ class BinarySearchTree():
     def __init__(self):
         self.root = None
 
+    def findMin(self, root):
+        while root.left:
+            root = root.left
+        return root
+
     def search(self, data):
 
         root = self.root
@@ -16,13 +21,12 @@ class BinarySearchTree():
             if root.val == data:
                 return True
 
-            if root.val > data:
+            if data < root.val:
                 root = root.left
-            elif root.val < data:
+            elif data > root.val:
                 root = root.right
 
         return False
-
 
     def insert(self, data):
         node = BSTNode(data)
@@ -45,8 +49,29 @@ class BinarySearchTree():
                 root = root.right
         return data
 
+    def deleteNode(self, root, key):
 
+        if root is None:
+            return root
 
+        if key < root.val:
+            root.left = self.deleteNode(root.left, key)
+        elif key > root.val:
+            root.right = self.deleteNode(root.right, key)
+        else:
+            if not root.left and not root.right:
+                root = None
+
+            elif not root.right:
+                root = root.left
+            elif not root.left:
+                root = root.right
+
+            else:
+                minVal = self.findMin(root.right)
+                root.val = minVal.val
+                root.right = self.deleteNode(root.right, minVal.val)
+        return root
 
 if __name__ == '__main__':
     bst = BinarySearchTree()

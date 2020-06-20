@@ -6,7 +6,7 @@ QuickSort is not a stable sort.
 The core part of quicksort algorithm is determining the pivot element.
 For choosing pivot element we have three options :
 1. Choose the left most element as pivot
-2.Choose the right most element as pivot
+2. Choose the right most element as pivot
 3. Choose middle element as pivot
 4. Choose a random element as pivot
 

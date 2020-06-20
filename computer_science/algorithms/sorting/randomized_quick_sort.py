@@ -1,17 +1,12 @@
 """
-Intuition: The basic idea of quicksort is to find the right location of a element (pivot) and once the location is determined,
-then sort the left half of elements and sort the right half of elements. Since the pivot is already sorted, the entire
-array is aslo sorted.
-QuickSort is not a stable sort.
-The core part of quicksort algorithm is determining the pivot element.
-For choosing pivot element we have three options :
-1. Choose the left most element as pivot
-2.Choose the right most element as pivot
-3. Choose middle element as pivot
-4. Choose a random element as pivot
 
-In this program, we'll use radnom index as pivot and note that for any input array the average space and time complexities
-of this approach are O(log(n)) and O(nlog(n)) respectively.
+Intuition: Since quicksort algorithm has a worst case time complexity of O(n*2) for certain input arrays. We need
+to some how mitigate this problem and make sure the worst case time complexity is made equal to average case time
+complexity. For this purpose, we can use new sorting algorithm called as "randomized quick sort".
+
+In this algorithm, we'll use random index as pivot and note that for any input array the average space and time
+complexities of this approach are O(log(n)) and O(nlog(n)) respectively.
+
 """
 
 import random

@@ -45,3 +45,4 @@ if __name__ == '__main__':
     obj.helper(9) # 3
     obj.helper(40000)  # 200
     obj.helper(80) # Not a square root
+    obj.helper(900) # 30
